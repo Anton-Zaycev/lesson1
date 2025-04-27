@@ -1,1 +1,74 @@
-123
+Пример рабочего процесса
+
+Внести изменения в файлы.
+git status - Проверка, был ли проект изменён
+git add . — добавить изменения.
+git commit -m "fix: исправил баг" — создать коммит.
+git push origin main — отправить на GitHub.
+Если на GitHub есть изменения: git pull origin main — обновиться.
+
+Настройка Git
+bash
+# Установить имя пользователя (для всех репозиториев)
+git config --global user.name "Ваше Имя"
+
+# Установить email (для всех репозиториев)
+git config --global user.email "ваша@почта.com"
+
+# Проверить настройки
+git config --list
+2. Локальная работа с репозиторием
+bash
+# Инициализировать новый репозиторий
+git init
+
+# Проверить статус файлов
+git status
+
+# Добавить все изменения в staging area
+git add .
+
+# Добавить конкретный файл
+git add имя_файла
+
+# Создать коммит
+git commit -m "Описание изменений"
+
+# Просмотреть историю коммитов
+git log
+
+
+3. Работа с GitHub
+bash
+# Клонировать удаленный репозиторий
+git clone https://github.com/username/repo.git
+
+# Добавить удаленный репозиторий (название обычно origin)
+git remote add origin https://github.com/username/repo.git
+
+# Проверить подключенные репозитории
+git remote -v
+
+# Отправить изменения в удаленный репозиторий (в ветку main/master)
+git push -u origin main
+
+# Обновить локальный репозиторий (скачать изменения с GitHub)
+git pull origin main
+
+
+4. Ветки (Branches)
+bash
+# Создать новую ветку
+git branch имя_ветки
+
+# Переключиться на ветку
+git checkout имя_ветки
+
+# Создать и переключиться на новую ветку
+git checkout -b имя_ветки
+
+# Удалить ветку (локально)
+git branch -d имя_ветки
+
+# Отправить ветку на GitHub
+git push origin имя_ветки
